@@ -99,12 +99,12 @@ const MicController = (props) => {
 		wavePath = new Path();
 		wavePath.strokeColor = variables.pink;
 		wavePath.strokeWidth = thickness;
-		wavePath.opacity = 0.6;
+		// wavePath.opacity = 0.6;
 
 		wavePath2 = new Path();
 		wavePath2.strokeColor = variables.turquoise;
 		wavePath2.strokeWidth = thickness;
-		wavePath2.opacity = 0.6;
+		// wavePath2.opacity = 0.6;
 		wavePath2.blendMode = 'multiply';
 
 		for (let i = 0; i < buffer; i++) {
@@ -129,13 +129,13 @@ const MicController = (props) => {
 
 		wavePath.segments.forEach((segment, i) => {
 			const v = dataArray[i * byteChunkSlice] / 128.0;
-			const y = (v * window.innerHeight) / 2;
+			const y = (v * window.innerHeight * 1.5) / 2;
 			segment.point.y = y;
 		});
 
 		wavePath2.segments.forEach((segment, i) => {
 			const v = dataArray[i * byteChunkSliceHalf] / 128.0;
-			const y = (v * window.innerHeight) / 2 + 35;
+			const y = (v * window.innerHeight * 1.5) / 2 + 35;
 			segment.point.y = y;
 		});
 	};
