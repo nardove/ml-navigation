@@ -1,4 +1,4 @@
-![app logo](https://github.com/nardove/ml-navigation/blob/master/src/assets/logo.svg?raw=true)
+![app logo](https://github.com/nardove/ml-navigation/blob/master/src/assets/logo.svg?raw=true){:height="50px" width="50px"}
 
 # ML Navigation
 
