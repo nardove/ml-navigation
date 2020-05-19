@@ -19,6 +19,7 @@ const MicController = (props) => {
 
 	const [audio, setAudio] = useState(null);
 	const [isMuted, setIsMuted] = useState(false);
+	const [micButtonDisabled, setMicButtonDisabled] = useState(false);
 
 	useEffect(() => {
 		console.log('[MicController] did update');
@@ -44,16 +45,16 @@ const MicController = (props) => {
 	const getMicrophone = async () => {
 		try {
 			console.log('[MicController] getMicrophone');
-			const audio = await navigator.mediaDevices
-				.getUserMedia({
-					audio: true,
-					video: false,
-				})
-				.then(console.log('mic ready'));
+			const audio = await navigator.mediaDevices.getUserMedia({
+				audio: true,
+			});
 			setAudio(audio);
 		} catch (err) {
+			setAudio(null);
+			setIsMuted(true);
+			setMicButtonDisabled(true);
 			alert(
-				'Microphone support for mobile devices is not not supported at the moment, but it will soon...'
+				'Microphone on mobile devices is not supported at the moment, but it will soon...'
 			);
 		}
 	};
@@ -144,7 +145,9 @@ const MicController = (props) => {
 		<Fragment>
 			{console.log('[MicController] did render')}
 			<div className='MicButton'>
-				<button onClick={toggleMicrophone}>{isMuted ? <MicOnSvg /> : <MicOffSvg />}</button>
+				<button disabled={micButtonDisabled} onClick={toggleMicrophone}>
+					{isMuted ? <MicOnSvg /> : <MicOffSvg />}
+				</button>
 			</div>
 			<canvas id='paper-canvas' resize='true' />
 			<SpeechRecognitionModel isMuted={isMuted} updateNav={props.updateNav} />

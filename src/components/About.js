@@ -7,9 +7,9 @@ const About = () => {
 				Hopefully you got here by using the <strong>"about"</strong> voice command.
 			</p>
 			<p>
-				The implementation is still very rough, I noticed that if there is too much noise a
-				random command may trigger, it works best when there is little to none background
-				noise.
+				Only 30 samples per word were use to train the model. Notice that if there is too
+				much noise a random command may trigger. It works best when there is little to no
+				background noise.
 			</p>
 			<p>
 				Google{' '}

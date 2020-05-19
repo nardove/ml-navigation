@@ -23,7 +23,8 @@ $green: #e0e28d;
 
 .App {
 	// text-align: center;
-	font-size: 1rem;
+	width: 90%;
+	font-size: 0.9rem;
 	max-width: 100%;
 	margin: auto;
 	display: flex;
@@ -80,6 +81,7 @@ $green: #e0e28d;
 }
 .Navigation li {
 	text-align: center;
+	font-size: 1rem;
 	color: $dark;
 	margin: 5px 0;
 	width: 100%;
