@@ -8,6 +8,8 @@ Basic site to test navigation using voice commands.
 
 The machine learning side of the project was setup using [Teachable Machine](https://teachablemachine.withgoogle.com/) by Google.
 
+[Launch app here](https://nardove-ml-navigation.netlify.app/)
+
 **Stack:**
 
 -   Reactjs
@@ -15,5 +17,7 @@ The machine learning side of the project was setup using [Teachable Machine](htt
 -   Paperjs for the sound wave animation rendering
 -   TeachableMachine for voice recognition and user interaction handling
 -   Sass for styling
+
+---
 
 <img src='https://github.com/nardove/ml-navigation/blob/master/src/assets/screenshot.png?raw=true' />
