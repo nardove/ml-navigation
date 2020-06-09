@@ -1,9 +1,15 @@
 import React from 'react';
+import gsap from 'gsap';
 
 const Home = () => {
+	// const pageRef = React.useRef(null);
+
+	// React.useEffect(() => {
+	// gsap.fromTo(pageRef, 1, { opacitiy: 0 }, { opacity: 1 });
+	// }, []);
+
 	return (
 		<div className='Page'>
-			<h2></h2>
 			<p>
 				Small experiment to test the use of machine learning to control the navigation on a
 				web site by using voice commands.
